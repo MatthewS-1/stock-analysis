@@ -8,9 +8,14 @@ import { SideBarContent, SidebarContentProps } from "./SideBarContent"
 
 const SideBarItems: Array<SidebarContentProps> = [
     {
-        title: "US News 2022 Stock Recommendations",
-        image_src: "https://upload.wikimedia.org/wikipedia/commons/1/18/U.S._News_%26_World_Report_logo.svg",
-        description: "Lorem Ipst dolor",
+        title: "Try out our API!",
+        image_src: "https://static.vecteezy.com/system/resources/thumbnails/000/569/512/small/vector60-3879-01.jpg",
+        description: "Access our historical stock API by calling /stocks/{stock symbol} or access our news API through /news/{stock symbol}",
+    },
+    {
+        title: "How does our sentiment classification work?",
+        image_src: "https://cdn-icons-png.flaticon.com/512/3662/3662817.png",
+        description: "sentiment classification is done by analyzing news headlines with a bayes classifier. The sentiment is then summarized as a number in [-1, 1] where -1 is very poor and 1 is very good.",
     }
 ]
 
@@ -29,7 +34,7 @@ function SideBar() {
             <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay />
                 <DrawerContent>
-                    <DrawerHeader borderBottomWidth='1px'>Stock Recommendations</DrawerHeader>
+                    <DrawerHeader borderBottomWidth='1px'>About</DrawerHeader>
                     <Accordion allowMultiple>
                         {
                             SideBarItems.map((content) => (

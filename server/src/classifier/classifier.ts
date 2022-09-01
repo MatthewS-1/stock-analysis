@@ -48,7 +48,7 @@ async function classify(articles: article[]){
     const sentimentsAsInt = sentiments.map(sentiment => sentimentToInt(sentiment))
     const sentimentSum = sentimentsAsInt.reduce((sum, curr) => sum + curr, 0)
     const overallSentiment = Math.tanh(sentimentSum/10)
-    console.log(sentiments, sentimentSum, overallSentiment)
+    //console.log(sentiments, sentimentSum, overallSentiment)
     return overallSentiment
 }
 
