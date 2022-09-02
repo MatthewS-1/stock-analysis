@@ -1,5 +1,5 @@
-<div align="center">
-  <a>
+<div align="center" >
+  <a href="#readme-top">
     <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Logo" width="80" height="80">
   </a>
 
@@ -35,12 +35,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -49,38 +43,38 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+https://user-images.githubusercontent.com/74331273/188052536-356d6ed8-95be-4890-9edd-df11a8416779.mp4
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+I'm currently working on deploying the project, so for the time being here is a video
+
+<h3>How it works</h3>
+The server uses Express along with the Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{stock symbol}' and '/news/{stock symbol}'. When one of these endpoints are called data from the Nasdaq and newsapi.org APIs are called and stored in a MySQL 
 
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+* [Node](https://nodejs.org/en/)
+<br></br>
+* [React](https://reactjs.org/)
+* [react-chartjs-2](https://react-chartjs-2.js.org/)
+* [Chakra-UI](https://chakra-ui.com/)
+<br></br>
+* [Express](https://expressjs.com/)
+* [Nasdaq API](https://data.nasdaq.com)
+* [NewsAPI.org API](https://newsapi.org)
+* [Natural.js](https://www.npmjs.com/package/natural)
+<br></br>
+* [MySql](https://www.mysql.com/)
+* [Node.js MySql](https://www.npmjs.com/package/mysql)
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Ensure npm is up to date
 * npm
   ```sh
   npm install npm@latest -g
@@ -88,18 +82,34 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free Nasdaq API Key and a NewsAPI key at [Nasdaq API](https://data.nasdaq.com) [NewAPI](https://newsapi.org)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/MatthewS-1/stock-analysis.git
    ```
 3. Install NPM packages
    ```sh
+   cd client
    npm install
    ```
+   ```sh
+   cd server
+   npm install
+   ```
+4. Set Up your MySQL server by importing the MySQL dump found in the 'MySqlDump' folder
+   ![MySQL import](https://dev.mysql.com/doc/workbench/en/images/wb-navigator-data-export-object.png)
 4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   ```ts
+    const NEWS_API_KEY = "Nasdaq API key"
+    const NASDAQ_API_KEY = "NewsAPI.org key"
+
+    //enter your MySQL config
+    const connection = mysql.createConnection({
+        host: ''
+        user: '',
+        password: '',
+        database: ''
+    })
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -108,14 +118,13 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Save API calls to MySQL database
+- [x] Implement Sentiment Classification
+- [ ] Deploy website
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">
 
 
 
