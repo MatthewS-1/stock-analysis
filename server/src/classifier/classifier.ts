@@ -1,6 +1,5 @@
 import * as natural from 'natural'
 import {adjectives, verbs, nouns} from './vocab'
-//import d from '../classifier/bayesClassifier.json'
 
 interface article {
     source: JSON

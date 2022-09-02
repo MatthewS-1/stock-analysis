@@ -1,15 +1,9 @@
 import express, {Express, Request, Response} from 'express';
-import * as mysql from 'mysql'
+import {connection} from './config'
 import {fetchStockData, stockJSON} from './stock'
 import { fetchNewsData, newsResponse } from './news';
 
 const app = express()
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'casio1572f-105',
-    database: 'stockdb'
-})
 
 connection.connect((err) => {
     if (err) {

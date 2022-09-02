@@ -1,6 +1,5 @@
 import * as mysql from 'mysql'
-
-const NASDAQ_API_KEY = "13DxjUqzFE3qbfXxyoEt"
+import {NASDAQ_API_KEY} from './config'
 
 interface stockJSON {
     quandl_error?: string,

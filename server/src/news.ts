@@ -1,8 +1,8 @@
 import * as mysql from 'mysql'
 import {classify} from './classifier/classifier'
+import { NEWS_API_KEY } from './config'
 
-const NEWS_API_KEY = "097ad8ad9e4a40a498a34e5a90c36440"
-const UPDATE_WHEN = 10800000 // time in milliseconds for a row in the database to be updated
+const UPDATE_WHEN = 10800000 // time in milliseconds to wait until a new NewsAPI call
 
 interface newsJSON {
     status?: string,
