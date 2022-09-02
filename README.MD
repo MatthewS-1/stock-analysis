@@ -6,7 +6,7 @@
 <h3 align="center">Stock Analysis</h3>
 
   <p align="center">
-    A website that provide historical data, news headlines, and sentiment for stocks
+    A website that provides historical data, news headlines, and sentiment for stocks
     <br />
     <a href="https://github.com/MatthewS-1/stock-analysis"><strong>Explore the docs »</strong></a>
     <br />
@@ -109,7 +109,7 @@ Ensure npm is up to date
 
     //enter your MySQL config
     const connection = mysql.createConnection({
-        host: ''
+        host: '',
         user: '',
         password: '',
         database: ''
