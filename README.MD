@@ -54,7 +54,7 @@ The server uses Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{st
 <br></br>
 To perform sentiment analysis, I developed a Naive Bayes classifier, as it's very good for performance. I used [Sentiment Analysis for Financial News](https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news) and [Financial Sentiment Analysis](https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis?select=data.csv) for training. In the '/news/{stock symbol}' endpoint, there is an extra part where the classifier is applied to the articles retrieved from the newsapi.org API so that a sentiment score is produced.
 <br></br>
-The client utilizes the two API endpoints to retrieve data. The '/stocks/{stock symbol}' endpoint is used for the statistics component, which involves a graph and stats about a stock. The table with recent news headlines and the sentiment score use '/news/{stock symbol}' for data.
+The client utilizes the two API endpoints to retrieve data. The '/stocks/{stock symbol}' endpoint is used for the statistics component, which involves a graph and stats about a stock. On the other hand, the table with recent news headlines and a sentiment score uses '/news/{stock symbol}' for data.
 
 
 ### Built With
