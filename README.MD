@@ -50,7 +50,7 @@ https://user-images.githubusercontent.com/74331273/188052536-356d6ed8-95be-4890-
 I'm currently working on deploying the project, so for the time being here is a video
 
 <h3>How it works</h3>
-The server uses Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{stock symbol}' and '/news/{stock symbol}'. When one of these endpoints are called data from the Nasdaq and newsapi.org APIs are called and stored in a MySQL database. The MySQL database stores the data along with a timestamp, so that new calls to the Nasdaq and newsapi.org APIs only occur again after 6 hours. 
+The server uses Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{stock symbol}' and '/news/{stock symbol}'. When one of these endpoints are called, data from the Nasdaq and newsapi.org APIs is retrieved and stored in a MySQL database. The MySQL database stores the data along with a timestamp, so that new calls to the Nasdaq and newsapi.org APIs only occur again after 6 hours. 
 <br></br>
 To perform sentiment analysis, I developed a Naive Bayes classifier, as it's very good for performance. I used [Sentiment Analysis for Financial News](https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news) and [Financial Sentiment Analysis](https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis?select=data.csv) for training. In the '/news/{stock symbol}' endpoint, there is an extra part where the classifier is applied to the articles retrieved from the newsapi.org API so that a sentiment score is produced.
 <br></br>
