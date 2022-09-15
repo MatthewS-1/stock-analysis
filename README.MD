@@ -6,7 +6,7 @@
 <h3 align="center">Stock Analysis</h3>
 
   <p align="center">
-    A website that provide historical data, news headlines, and sentiment for stocks
+    A website that provides historical data, news headlines, and sentiment for stocks
     <br />
     <a href="https://github.com/MatthewS-1/stock-analysis"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,11 +50,11 @@ https://user-images.githubusercontent.com/74331273/188052536-356d6ed8-95be-4890-
 I'm currently working on deploying the project, so for the time being here is a video
 
 <h3>How it works</h3>
-The server uses Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{stock symbol}' and '/news/{stock symbol}'. When one of these endpoints are called data from the Nasdaq and newsapi.org APIs are called and stored in a MySQL database. The MySQL database stores the data along with a timestamp, so that new calls to the Nasdaq and newsapi.org APIs only occur again after 6 hours. 
+The server uses Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{stock symbol}' and '/news/{stock symbol}'. When one of these endpoints are called, data from the Nasdaq and newsapi.org APIs is retrieved and stored in a MySQL database. The MySQL database stores the data along with a timestamp, so that new calls to the Nasdaq and newsapi.org APIs only occur again after 6 hours. 
 <br></br>
 To perform sentiment analysis, I developed a Naive Bayes classifier, as it's very good for performance. I used [Sentiment Analysis for Financial News](https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news) and [Financial Sentiment Analysis](https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis?select=data.csv) for training. In the '/news/{stock symbol}' endpoint, there is an extra part where the classifier is applied to the articles retrieved from the newsapi.org API so that a sentiment score is produced.
 <br></br>
-The client utilizes the two API endpoints to retrieve data. The '/stocks/{stock symbol}' endpoint is used for the statistics component, which involves a graph and stats about a stock. The table with recent news headlines and the sentiment score use '/news/{stock symbol}' for data.
+The client utilizes the two API endpoints to retrieve data. The '/stocks/{stock symbol}' endpoint is used for the statistics component, which involves a graph and stats about a stock. On the other hand, the table with recent news headlines and a sentiment score uses '/news/{stock symbol}' for data.
 
 
 ### Built With
@@ -109,7 +109,7 @@ Ensure npm is up to date
 
     //enter your MySQL config
     const connection = mysql.createConnection({
-        host: ''
+        host: '',
         user: '',
         password: '',
         database: ''
