@@ -47,7 +47,6 @@
 https://user-images.githubusercontent.com/74331273/188052536-356d6ed8-95be-4890-9edd-df11a8416779.mp4
 
 
-I'm currently working on deploying the project, so for the time being here is a video
 
 <h3>How it works</h3>
 The server uses Nasdaq and newsapi.org APIs to create two endpoints '/stocks/{stock symbol}' and '/news/{stock symbol}'. When one of these endpoints are called, data from the Nasdaq and newsapi.org APIs is retrieved and stored in a MySQL database. The MySQL database stores the data along with a timestamp, so that new calls to the Nasdaq and newsapi.org APIs only occur again after 6 hours. 
